@@ -17,3 +17,7 @@ h1 .status{
 	display: block;
 	margin: auto;
 }
+
+button{
+	width: 150px;
+}
