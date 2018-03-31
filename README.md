@@ -1,4 +1,3 @@
-flask-video-streaming
-=====================
-
-Supporting code for my article [video streaming with Flask](http://blog.miguelgrinberg.com/post/video-streaming-with-flask) and its follow-up [Flask Video Streaming Revisited](http://blog.miguelgrinberg.com/post/flask-video-streaming-revisited).
+makeNTU 第 41 組
+==============
+江子豪、許博竣、高佑豪、謝宜展
