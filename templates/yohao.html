@@ -16,16 +16,9 @@
             </div>
 
 
-            <form method="post" action="{{ url_for('status') }}">
-              <button name="savePic" value="savePic">save picture</button>
-              <br>
-              <button name="cmd" value="turnLeft"> ＜ </button>
-              <button name="cmd" value="keepGoing"> 囗 </button>
-              <button name="cmd" value="turnRight"> ＞ </button>
-              <br>
-              <button name="cmd" value="testMode"> 測試模式 </button>
-              <button name="cmd" value="runMode"> 運行模式 </button>
-
+            <form method="post" action="{{ url_for('yohao') }}">
+              <input name="text">
+              <button type="summit">save Pic</button>
             </form>
 
             <script>
