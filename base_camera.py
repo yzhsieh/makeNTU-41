@@ -68,7 +68,7 @@ class BaseCamera(object):
 
             # wait until frames are available
             while self.get_frame() is None:
-                time.sleep(0)
+                time.sleep(0.2)
 
     def get_frame(self):
         """Return the current camera frame."""

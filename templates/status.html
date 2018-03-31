@@ -6,8 +6,23 @@
   <body>
       <div class="container">
                 <h1>Status ：<span class="status" id="status">{{ status }}</span></h1>
+
+            <div id="imgDIV">
+                {% if shot == 0 %}
+              <img src="{{ url_for('video_feed') }}">
+                {% else %}
+              <img src="{{ url_for('shot_and_video_feed') }}">
+                {% endif %}
+            </div>
+
+
+            <form method="post" action="{{ url_for('status') }}">
+              <button name="savePic">save picture</button>
+              <button name="turnLeft"> ＜ </button>
+              <button name="turnRight"> ＞ </button>
+
             </form>
-            <img src="{{ url_for('video_feed') }}">
+
             <script>
                     var stat = document.getElementById("status")
                     console.log(stat)
