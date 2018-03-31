@@ -4,6 +4,7 @@ from importlib import import_module
 import os
 import io
 import time
+import requests
 from flask import Flask, render_template, Response, request
 # import camera driver
 if os.environ.get('CAMERA'):
@@ -82,7 +83,10 @@ class webService():
             print(request.form)
             return render_template("status.html", status="Good", shot=1)
 
-
+    ''' end of class definition'''
+def take_a_shot():
+    print("let's take a shot")
+    r = requests.post(url = '0.0.0.0:5000/shot_and_video_feed', data = [])
 
 if __name__ == '__main__':
     WS = webService()
