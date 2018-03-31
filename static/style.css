@@ -1,0 +1,14 @@
+.container{
+    position: relative;
+    width: 75%;
+    margin: 0px auto;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+
+}
+
+h1 .status{
+    font-weight: 900;
+    /* color: green; */
+}

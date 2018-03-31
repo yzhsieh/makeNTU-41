@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Just a test page</title>
+  </head>
+  <body>
+    <h1>Test for button</h1>
+    <form method="post" action="{{ url_for('test') }}">
+      <button name="type" value="1">1</button>
+      <button name="type" value="2">2</button>
+      <button name="type" value="3">3</button>
+      {% if btn%}
+      <h2>You press {{ btn }}</h2>
+      {% endif %}
+    </form>
+  </body>
+</html>

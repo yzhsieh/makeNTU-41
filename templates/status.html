@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Guard Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"></link>
+  </head>
+  <body>
+      <div class="container">
+                <h1>Status ：<span class="status" id="status">{{ status }}</span></h1>
+            </form>
+            <img src="{{ url_for('video_feed') }}">
+            <script>
+                    var stat = document.getElementById("status")
+                    console.log(stat)
+                    var cmp = "{{ status }}";
+                    console.log(cmp);
+                    if(cmp == "Good"){
+                        stat.style.color = "green";
+                    }
+                    else if(cmp == "Bad"){
+                        stat.style.color = "red";
+                    }
+                </script>
+        </div>
+  </body>
+</html>
