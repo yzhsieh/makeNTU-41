@@ -7,7 +7,9 @@
       <div class="container">
                 <h1>Status ：<span class="status" id="status">{{ status }}</span></h1>
             </form>
-            <img src="{{ url_for('video_feed') }}">
+            <div id="imgDIV">
+              <img src="{{ url_for('video_feed') }}">
+            </div>
             <script>
                     var stat = document.getElementById("status")
                     console.log(stat)

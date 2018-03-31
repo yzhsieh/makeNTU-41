@@ -12,3 +12,8 @@ h1 .status{
     font-weight: 900;
     /* color: green; */
 }
+
+#imgDIV img{
+	display: block;
+	margin: auto;
+}

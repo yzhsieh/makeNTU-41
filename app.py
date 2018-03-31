@@ -10,7 +10,7 @@ else:
     from camera import Camera
 
 # Raspberry Pi camera module (requires picamera package)
-# from camera_pi import Camera
+from camera_pi import Camera
 
 app = Flask(__name__)
 
@@ -52,5 +52,5 @@ def status():
 
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0', threaded=True)
-    app.run()
+     app.run(host='0.0.0.0', threaded=True)
+    #app.run()
