@@ -8,24 +8,32 @@
                 <h1>Status ：<span class="status" id="status">{{ status }}</span></h1>
 
             <div id="imgDIV">
-                {% if shot == 0 %}
-              <img src="{{ url_for('video_feed') }}">
+                {% if show == 1 %}
+              <img id="mainImg" src="./show2.jpg">
+                {% elif shot == 0 %}
+              <img id="mainImg" src="{{ url_for('video_feed') }}">
                 {% else %}
-              <img src="{{ url_for('shot_and_video_feed') }}">
+              <img id="mainImg" src="{{ url_for('shot_and_video_feed') }}">
                 {% endif %}
             </div>
 
 
             <form method="post" action="{{ url_for('status') }}">
+              <div>
               <button name="savePic" value="savePic">save picture</button>
+              </div>
               <br>
+              <div>
               <button name="cmd" value="turnLeft"> ＜ </button>
               <button name="cmd" value="keepGoing"> 囗 </button>
               <button name="cmd" value="turnRight"> ＞ </button>
+              </div>
               <br>
-              <button name="cmd" value="testMode"> 測試模式 </button>
-              <button name="cmd" value="runMode"> 運行模式 </button>
-
+              <div>
+              <button name="cmd" value="setUp"> 設定模式 </button>
+              <button name="cmd" value="execution"> 運行模式 </button>
+              <button name="cmd" value="stopExec"> 停止運行 </button>
+              </div>
             </form>
 
             <script>
@@ -40,6 +48,36 @@
                         stat.style.color = "red";
                     }
                 </script>
+            <script type="text/javascript">
+              function imgExist(url) 
+              {
+                 var img = new Image();
+                 img.src = url;
+                 return img.height != 0;
+              }
+              function fileExists(url) {
+                  if(url){
+                      var req = new XMLHttpRequest();
+                      req.open('GET', url, false);
+                      req.send();
+                      return req.status==200;
+                  } else {
+                      return false;
+                  }
+              }
+
+              function showDetection(){
+                console.log(imgExist("show.jpg"))
+                if(imgExist("show.jpg")){
+                var mainImg = document.getElementById('mainImg')
+                var statusText = document.getElementById('status')
+                mainImg.src = "show.jpg";
+                statusText.innerText = "Warning!!";
+                statusText.style.color = "red";
+                }
+              }
+              // setInterval("showDetection()", 5000)
+            </script>
         </div>
   </body>
 </html>
